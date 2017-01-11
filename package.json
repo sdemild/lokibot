@@ -1,0 +1,15 @@
+{
+  "name": "loki-discord-bot",
+  "version": "1.0.0",
+  "description": "bot of loki",
+  "main": "Loki.js",
+   "dependencies": {
+    "discord.io": "^2.3.0"
+  },
+    "devDependencies": {},
+  "scripts": {
+    "test": "node Loki.js"
+  },
+  "author": "Iron",
+  "license": "ISC"
+}
