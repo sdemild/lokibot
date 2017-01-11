@@ -53,8 +53,8 @@ bot.on('message', function(user, userID, channelID, message, event) {
     if (message === ">help") {
         bot.sendMessage({
             to: channelID,
-            message: "Commands: spawn, dogs, 150, fc, twss, only, loki." +
-            " Mention Commands: button, vc, bitch, leech, insult, curse, praise."
+            message: "Commands: spawn, dogs, 150, fc, twss, only, loki.\n" +
+            "Mention Commands: button, vc, bitch, leech, insult, curse, praise, mercy."
         });
     };
 	if (message === "<@268625811207094273>") {
@@ -122,6 +122,18 @@ bot.on('message', function(user, userID, channelID, message, event) {
         bot.sendMessage({
             to: channelID,
             message: mention +  " bitch"
+        });
+    }
+});
+
+bot.on('message', function(user, userID, channelID, message, event) {
+	var re1 = new RegExp(">mercy");
+    if (/>mercy/.test(message)) {
+    	content = event.d.content;
+    	mention = content.replace(">mercy", " ");
+        bot.sendMessage({
+            to: channelID,
+            message: mention +  " where's my mercy?"
         });
     }
 });
